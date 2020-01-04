@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio Kamil Olszewski, programowanie, Olszewsk.dev, programista Kamil Olszewski Bielsk Podlaski"
+    />
+
+    <title>Kamil Olszewski- portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+
+<body ng-app="websiteApp" ng-controller="websiteCtrl">
+
+        <div class="bg">
+            <nav class="navbar navbar-inverse navbar fixed-top" id="home">
+                <div class="container-fluid">
+                    <a class="navbar-brand navBarText" href="#start" ng-click="setStep(0)">Start</a>
+                    <a class="navbar-brand navBarText" href="#about" ng-click="setStep(1)">O mnie</a>
+                    <a class="navbar-brand navBarText" href="#projects" ng-click="setStep(2)">Moje projekty</a>
+                    <a class="navbar-brand navBarText" href="#stack" ng-click="setStep(3)">Stack</a>
+                </div>
+            </nav>
+            <div class="header">
+                <br />
+                    <!-- Start step -->
+                <div id = "startWindow" class="head-wrap" ng-show="step === 0">
+                    <div class="text-editor-wrap">
+                        <div class="title-bar"><span class="title">Kamil_Olszewski.exe</span></div>
+                        <div class="text-body">
+                            <div>
+                                <img class="img-circle center-block" src="Images/img_20180107_142720.115.jpg" alt="Kamil Olszewski- profilowe zdjęcie" style="margin:auto; display:block; border-radius: 50%;"
+                                />
+                            </div>
+                            <br /> $ <span class="typed"></span>
+                        </div>
+                    </div>
+                </div>
+                    <!-- About me step -->
+                <div id = "aboutWindow" class="head-wrap" ng-show="step === 1">
+                    <div class="text-editor-wrap">
+                        <div class="title-bar"><span class="title">Kamil_Olszewski.exe</span></div>
+                        <div class="text-body" style="overflow:hidden;height:1%; font-size: 1.0em;">
+                            <div>
+                                <p style="color: lightgrey; text-indent: 50px; text-align: justify; letter-spacing: 2px">
+                                    Jestem Kamil Olszewski, zajmuję się programowaniem od 2017 roku. Uczyłem się tajników programowania na podstawie realizacji
+                                    własnych projektów w postaci gier oraz aplikacji webowych opartych na jezyku C# i technologii
+                                    .NET. Od 2018 roku podjąłem pracę zawodową jako programista i obecnie zajmuję się tworzeniem
+                                    aplikacji opartej o architekturę mikroserwisową w .Net Core.
+                                    <br />
+                                    <br />
+                                </p>
+                                <h3 style="font-size: 1.5rem; text-indent: 20px;">Odbyte szkolenia:</h3>
+                                <ul style="list-style-type:square;">
+                                    <li>Bezpieczeństwo aplikacji webowych- atak i obrona (18.12.2018)</li>
+                                    <li>Tworzenie aplikacji z wykorzystaniem frameworku Angular (03.04.2019)</li>
+                                    <li>Programowanie Event Sourcing (w środowisku .NET) (17.05.2019)</li>
+                                    <li>Nowoczesna architektura aplikacji web- Microservices, REST, noSQL (w środowisku .NET) (29.05.2019)</li>
+                                    <li>Skuteczna organizacja czasu pracy dla programistów (08.10.2019)</li>
+                                    <li>Implementacja modeli złożonych domen (Domain Driven Design) w środowisku .NET (17.10.2019)</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                                <!-- About projects -->
+                                <div id = "projectsWindow" class="head-wrap" ng-show="step === 2">
+                                    <div class="text-editor-wrap">
+                                        <div class="title-bar"><span class="title">Kamil_Olszewski.exe</span></div>
+                                        <div class="text-body" style="overflow:hidden;height:1%; font-size: 1.0em;">
+                                            <br/>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="text-center">
+                                                        <figure class="appsLogo">
+                                                            <a href="https://play.google.com/store/apps/details?id=com.Olszewski.ClickMaths" target="_blank">
+                                                                <img src="Images/CMICONA.png" class="rounded appIcons" alt="Click Maths icon.">
+                                                            </a>
+                                                            <figcaption>
+                                                                <p class="textBold">Click Maths</p>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="text-center">
+                                                        <figure class="appsLogo">
+                                                            <a href="https://play.google.com/store/apps/details?id=com.Olszewski.ThumbGym" target="_blank" class="appsLogo">
+                                                                <img src="Images/Ikongoogleplay.png" class="rounded appIcons" alt="Thumb Gym icon.">
+                                                            </a>
+                                                            <figcaption>
+                                                                <p class="textBold">Thumb Gym</p>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                              <!-- Stack -->
+                              <div id = "stackWindow" class="head-wrap" ng-show="step === 3">
+                                <div class="text-editor-wrap">
+                                    <div class="title-bar"><span class="title">Kamil_Olszewski.exe</span></div>
+                                    <div class="text-body" style="overflow:hidden;height:1%; font-size: 1.0em;">
+                                        <div class="row align-items-start">
+                                            <div class="col-md-3">
+                                                    <p class="stackIcon"><i class="fa fa-cogs" aria-hidden="true"></i> Backend</p>
+                                                    <ul style="list-style-type:square;">
+                                                            <li>.NET</li>
+                                                            <li>.NET CORE</li>
+                                                            <li>Entity Framework</li>
+                                                            <li>LINQ</li>
+                                                            <li>XUnit</li>
+                                                        </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                    <p class="stackIcon"><i class="fa fa-code" aria-hidden="true"></i> Frontend</p>
+                                                    <ul style="list-style-type:square;">
+                                                            <li>HTML</li>
+                                                            <li>CSS</li>
+                                                            <li>AngularJS</li>
+                                                            <li>Angular</li>
+                                                            <li>Bootstrap</li>
+                                                            <br/>
+                                                        </ul>
+                                                </div>
+                                                <div class="col-md-3">
+                                                        <p class="stackIcon"><i class="fa fa-database" aria-hidden="true"></i> Database</p>
+                                                        <ul style="list-style-type:square;">
+                                                                <li>SQL</li>
+                                                                <li>TSQL</li>
+                                                                <li>MS SQL</li>
+                                                                <li>PostgreSQL</li>
+                                                                <li>Liquibase</li>
+                                                                <br/>
+                                                            </ul>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                            <p class="stackIcon"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>Pozostałe</p>
+                                                            <ul style="list-style-type:square;">
+                                                                    <li>GIT</li>
+                                                                    <li>JIRA</li>
+                                                                    <li>Visual Studio</li>
+                                                                    <li>GIMP</li>
+                                                                    <br/>
+                                                                </ul>
+                                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fixedbutton">
+                            <a class="btn" href="https://www.linkedin.com/in/kamil-olszewski-dev/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a class="btn" href="https://play.google.com/store/apps/developer?id=Olszewski.Dev" target="_blank"><i class="fa fa-google"></i></a>
+                            <a class="btn" href="mailto:kontaktolszewskidev@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                        </div>
+        </div>
+    <script src="Scripts/websiteController.js"></script>
+    <script src="Scripts/typed.js"></script>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/mainjs.js"></script>
+</body>
+
+</html>
